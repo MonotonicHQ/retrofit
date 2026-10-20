@@ -1,0 +1,59 @@
+name: Bug report
+description: Wrong output, a non-zero exit on valid input, or a crash.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Leave out credentials, connection strings and data you cannot share. A schema or oplog cut down to the
+        smallest one that still shows the problem is the most useful thing you can attach.
+  - type: input
+    id: version
+    attributes:
+      label: retrofit version
+      description: The output of `retrofit --version`.
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - macOS (Apple silicon)
+        - macOS (Intel)
+        - Linux (amd64)
+        - Linux (arm64)
+    validations:
+      required: true
+  - type: input
+    id: postgres
+    attributes:
+      label: PostgreSQL version
+      description: The server's major version (for example 17), if a database was involved.
+  - type: textarea
+    id: commands
+    attributes:
+      label: What you ran
+      description: The commands, in order.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened
+      description: The output, including any error and its exit code.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: inputs
+    attributes:
+      label: Inputs
+      description: The oplog lines, schema or SQL that reproduce it, cut down as far as you can.
