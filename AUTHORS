@@ -1,0 +1,12 @@
+# This is the official list of The Retrofit Authors for copyright purposes.
+# "The Retrofit Authors" in every source file's copyright header means the
+# people and organizations listed here.
+#
+# Add entries in this form:
+#   Individuals:   Name <email address>
+#   Organizations: Name
+#
+# Every commit's author email must appear here; the pre-push hook refuses
+# a push that carries one that does not.
+
+Chris K Wensel <chris@wensel.net>
